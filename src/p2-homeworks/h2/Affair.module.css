@@ -1,0 +1,40 @@
+.table {
+    background-color: #99a6d2;
+}
+
+th:first-child {
+    border-left: 1px solid #314e6b;;
+}
+
+th {
+    min-width: 100px;
+    padding: 20px;
+    border-right: 1px solid #314e6b;
+    color: white;
+    text-shadow: 2px 2px #000;
+}
+.btn {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 10px;
+    color: #360606;
+    transition: all .3s ease-in-out;
+}
+.btn:hover {
+    color: #ff5f5f;
+}
+.high {
+    color: #ff5f5f;
+}
+.low {
+    color: #a6d3a3;
+}
+.middle {
+    color: #fff856;
+}

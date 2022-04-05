@@ -1,0 +1,27 @@
+.btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 ;
+}
+.all, .low, .middle, .high {
+    width: 80px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 10px;
+    color: #360606;
+    transition: all .3s ease-in-out;
+}
+.all:hover {
+    background-color: #7db9ff;
+}
+.low:hover {
+    background-color: #a6d3a3;
+}
+.middle:hover {
+    background-color: #fff856;
+}
+.high:hover {
+    background-color: #ff5f5f;
+}
