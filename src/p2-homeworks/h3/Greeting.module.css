@@ -1,0 +1,42 @@
+.someClass {
+
+}
+
+.error,
+.input {
+    width: 300px;
+    height: 30px;
+    background-color: rgba(190, 255, 179, 0.24);
+    border: 0px solid transparent;
+    font-size: 18px;
+}
+.input {
+    border-bottom: 3px solid black;
+}
+.error {
+    border-bottom: 3px solid red;
+    background-color: rgba(255, 65, 65, 0.45);
+}
+.btn,
+.disabled_btn {
+    margin: 0 10px;
+    width: 45px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    opacity: .9;
+}
+.disabled_btn {
+    background-color: #ff5f5f;
+}
+.btn {
+    background-color: #a6d3a3;
+}
+.btn:hover,
+.disabled_btn:hover {
+    opacity: 1;
+}
