@@ -4,24 +4,41 @@
     margin: 20px 0 ;
 }
 .all, .low, .middle, .high {
-    width: 80px;
-    height: 30px;
-    font-weight: 700;
-    font-size: 18px;
+    opacity: 0.5;
+
     background-color: white;
     border-radius: 10px;
     color: #360606;
-    transition: all .3s ease-in-out;
+    transition: all .8s ease-in-out;
 }
-.all:hover {
+.btn {
+    fill-opacity: .8;
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    color: #360606;
+}
+.active_all,
+.active_low,
+.active_high,
+.active_middle{
+    background-color: #7db9ff;
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: background-color .3s ease-in-out;
+}
+.active_all {
     background-color: #7db9ff;
 }
-.low:hover {
+.active_low {
     background-color: #a6d3a3;
 }
-.middle:hover {
+.active_middle {
     background-color: #fff856;
 }
-.high:hover {
+.active_high {
     background-color: #ff5f5f;
 }

@@ -7,6 +7,7 @@ type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
     setFilter: (value: FilterType) => void
     deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -18,28 +19,29 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {
-        props.setFilter('all')
-    } // need to fix
-    const setHigh = () => {
-        props.setFilter('high')
+    const setBtn = (f: FilterType) => {
+        return props.setFilter(f)
     }
-    const setMiddle = () => {
-        props.setFilter('middle')
+    const setClass = (f: FilterType) => {
+        return (props.filter === f ? classes[`active_${f}`] : "")
     }
-    const setLow = () => {
-        props.setFilter('low')
-    }
-
     return (
         <div>
 
             {mappedAffairs}
             <div className={classes.btns}>
-                <button className={classes.all} onClick={setAll}>All</button>
-                <button className={classes.high} onClick={setHigh}>High</button>
-                <button className={classes.middle} onClick={setMiddle}>Middle</button>
-                <button className={classes.low} onClick={setLow}>Low</button>
+                <button className={ setClass('all') || classes.btn}
+                        onClick={() => setBtn('all')}>All
+                </button>
+                <button className={setClass('high') || classes.btn}
+                        onClick={() => setBtn('high')}>High
+                </button>
+                <button className={setClass('middle') || classes.btn}
+                        onClick={() => setBtn('middle')}>Middle
+                </button>
+                <button className={setClass('low') || classes.btn}
+                        onClick={() => setBtn('low')}>Low
+                </button>
             </div>
         </div>
     )
