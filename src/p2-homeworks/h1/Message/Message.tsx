@@ -8,15 +8,15 @@ type MessageDataType= {
     time: string
 }
 
-function Message(props: MessageDataType) {
+const Message: React.FC<MessageDataType> = ({avatar, message, name, time}) => {
     return (
         <div className={classes.message}>
-            <img className={classes.avatar} src={props.avatar} alt="avatar"/>
+            <img className={classes.avatar} src={avatar} alt="avatar"/>
             <div className={classes.angle} />
             <div className={classes.body}>
-                <div className={classes.name}>{props.name}</div>
-                <div className={classes.text}>{props.message}</div>
-                <div className={classes.time}>{props.time}</div>
+                <div className={classes.name}>{name}</div>
+                <div className={classes.text}>{message}</div>
+                <div className={classes.time}>{time}</div>
             </div>
         </div>
     )

@@ -11,7 +11,7 @@
     color: #360606;
     transition: all .8s ease-in-out;
 }
-.btn {
+.remove {
     fill-opacity: .8;
     width: 60px;
     height: 30px;

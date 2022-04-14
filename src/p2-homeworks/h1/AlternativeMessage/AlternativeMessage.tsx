@@ -1,22 +1,27 @@
 import React from 'react'
-import classes from "./AlternativeMessage.module.css";
+import s from "./AlternativeMessage.module.css";
 
-type AlternativeMessageDataType= {
+type AlternativeMessageDataType = {
     avatar: string
     message: string
     name: string
     time: string
 }
 
-function AlternativeMessage(props: AlternativeMessageDataType) {
+const AlternativeMessage: React.FC<AlternativeMessageDataType> = ({
+                                                                      avatar,
+                                                                      message,
+                                                                      name,
+                                                                      time
+                                                                  }) => {
     return (
-        <div className={classes.alternativeMessage}>
-            <img className={classes.avatar} src={props.avatar} alt="avatar"/>
-            <div className={classes.angle} />
-            <div className={classes.body}>
-                <div className={classes.name}>{props.name}</div>
-                <div className={classes.text}>{props.message}</div>
-                <div className={classes.time}>{props.time}</div>
+        <div className={s.alternativeMessage}>
+            <img className={s.avatar} src={avatar} alt="avatar"/>
+            <div className={s.angle}/>
+            <div className={s.body}>
+                <div className={s.name}>{name}</div>
+                <div className={s.text}>{message}</div>
+                <div className={s.time}>{time}</div>
             </div>
         </div>
     )
