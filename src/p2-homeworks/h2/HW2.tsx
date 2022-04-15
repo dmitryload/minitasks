@@ -32,6 +32,7 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     } else if (filter === 'middle') {
         return affairs.filter((el) => el.priority === 'middle')
     } else return affairs*/
+    if (filter === "all") return affairs
     return affairs.filter(obj => obj.priority == filter)
 }
 export const deleteAffair = (affairs: AffairType[], _id: string): AffairType[] => {            // need to fix any+
