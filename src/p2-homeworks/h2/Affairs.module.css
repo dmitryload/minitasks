@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     margin: 20px 0 ;
+    min-width: 400px;
 }
 .all, .low, .middle, .high {
     opacity: 0.5;
@@ -19,16 +20,17 @@
     border-radius: 10px;
     color: #360606;
 }
+.btn,
 .active_all,
 .active_low,
 .active_high,
 .active_middle{
-    background-color: #7db9ff;
+    background-color: #b0ccee;
     width: 60px;
     height: 30px;
     font-size: 14px;
     border-radius: 10px;
-    transition: background-color .3s ease-in-out;
+    transition: background-color .2s ease-in-out;
 }
 .active_all {
     background-color: #7db9ff;

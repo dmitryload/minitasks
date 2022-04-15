@@ -1,6 +1,5 @@
 import React from 'react';
-import {FilterType} from "./HW2";
-import classes from "./Affairs.module.css";
+import s from "./Affairs.module.css";
 
 type ButtonType = {
     callback: (id: string) => void
@@ -12,7 +11,7 @@ const UniversalButtonRemove: React.FC<ButtonType> = ({callback, name, id}) => {
         callback(id)
     }
     return (
-        <button className={classes.remove} onClick={onClickHandler}>{name}</button>
+        <button className={s.remove} onClick={onClickHandler}>{name}</button>
     );
 };
 

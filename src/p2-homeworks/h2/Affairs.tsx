@@ -1,7 +1,7 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
-import classes from "./Affairs.module.css";
+import s from "./Affairs.module.css";
 import UniversalButtonAdd from "./UniversalButtonAdd";
 
 type AffairsPropsType = { // need to fix any
@@ -29,16 +29,17 @@ const Affairs: React.FC<AffairsPropsType> = ({
         return setFilter(f)
     }
     const setClass = (f: FilterType) => {
-        return (filter === f ? classes[`active_${f}`] : "")
+        return (filter === f ? s[`active_${f}`] : "")
     }
     return (
         <div>
             {mappedAffairs}
-            <div className={classes.btns}>
+            <div className={s.btns}>
                 <UniversalButtonAdd name={'all'} callback={setBtn} setClass={setClass}/>
                 <UniversalButtonAdd name={'high'} callback={setBtn} setClass={setClass}/>
                 <UniversalButtonAdd name={'middle'} callback={setBtn} setClass={setClass}/>
                 <UniversalButtonAdd name={'low'} callback={setBtn} setClass={setClass}/>
+            </div>
                 {/*<button className={ setClass('all') || classes.btn}
                         onClick={() => setBtn('all')}>All
                 </button>
@@ -51,7 +52,7 @@ const Affairs: React.FC<AffairsPropsType> = ({
                 <button className={setClass('low') || classes.btn}
                         onClick={() => setBtn('low')}>Low
                 </button>*/}
-            </div>
+
         </div>
     )
 }

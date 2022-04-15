@@ -1,6 +1,6 @@
 import React from 'react';
 import {FilterType} from "./HW2";
-import classes from "./Affairs.module.css";
+import s from "./Affairs.module.css";
 
 type ButtonType = {
     callback: (f: FilterType) => void
@@ -12,7 +12,7 @@ const UniversalButtonAdd: React.FC<ButtonType> = ({callback, name, setClass}) =>
         callback(name)
     }
     return (
-        <button className={setClass(name) || classes.btn} onClick={onClickHandler}>{name}</button>
+        <button className={setClass(name) || s.btn} onClick={onClickHandler}>{name}</button>
     );
 };
 

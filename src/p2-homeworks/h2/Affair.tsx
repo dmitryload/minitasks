@@ -1,6 +1,6 @@
 import React from 'react'
 import {AffairType} from "./HW2";
-import classes from "./Affair.module.css"
+import s from "./Affair.module.css"
 import UniversalButtonRemove from "./UniversalBtnRemove";
 
 
@@ -16,9 +16,9 @@ const Affair:React.FC<AffairPropsType> = ({affair, deleteAffairCallback}) => {
         deleteAffairCallback(newId)
     }// need to fix
     return (
-        <tr className={classes.table}>
+        <tr className={s.table}>
             <th>{affair.name}</th>
-            <th className={classes[affair.priority]}>{affair.priority}</th>
+            <th className={s[affair.priority]}>{affair.priority}</th>
             <th>
                 <UniversalButtonRemove name={"x"} callback={deleteCallback} id={affair._id}/>
                 {/*<button className={classes.btn} onClick={() => deleteCallback(props.affair._id)}>X</button>*/}

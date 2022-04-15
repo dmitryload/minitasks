@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
-import classes from "../../p1-main/m1-ui/u1-app/App.module.css"
+import s from "../../p1-main/m1-ui/u1-app/App.module.css"
 import {v1} from "uuid";
 
 
@@ -33,7 +33,7 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
         return affairs.filter((el) => el.priority === 'middle')
     } else return affairs*/
     if (filter === "all") return affairs
-    return affairs.filter(obj => obj.priority == filter)
+    return affairs.filter(obj => obj.priority === filter)
 }
 export const deleteAffair = (affairs: AffairType[], _id: string): AffairType[] => {            // need to fix any+
     return affairs.filter(el => el._id !== _id)
@@ -47,8 +47,8 @@ function HW2() {
     const deleteAffairCallback = (_id: string) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
     return (
-        <div className={classes.homework}>
-            <div className={classes.title2}>Homework 2:</div>
+        <div className={s.homework}>
+            <div className={s.title2}>Homework 2:</div>
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}
