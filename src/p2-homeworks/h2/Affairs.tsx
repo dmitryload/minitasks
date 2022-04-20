@@ -2,7 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import s from "./Affairs.module.css";
-import UniversalButtonAdd from "./UniversalButtonAdd";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // need to fix any
     data: AffairType[]
@@ -18,8 +18,8 @@ const Affairs: React.FC<AffairsPropsType> = ({
                                                  filter
                                              }) => {
     const mappedAffairs = data.map((a: AffairType) => (
-        <Affair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
+        <Affair
+            key={a._id}
             affair={a}
             deleteAffairCallback={deleteAffairCallback}
         />
@@ -33,26 +33,15 @@ const Affairs: React.FC<AffairsPropsType> = ({
     }
     return (
         <div>
-            {mappedAffairs}
             <div className={s.btns}>
-                <UniversalButtonAdd name={'all'} callback={setBtn} setClass={setClass}/>
-                <UniversalButtonAdd name={'high'} callback={setBtn} setClass={setClass}/>
-                <UniversalButtonAdd name={'middle'} callback={setBtn} setClass={setClass}/>
-                <UniversalButtonAdd name={'low'} callback={setBtn} setClass={setClass}/>
+                <SuperButton className={setClass("all")} onClick={()=>setBtn("all")}>all</SuperButton>
+                <SuperButton className={setClass("high")} onClick={()=>setBtn("high")}>high</SuperButton>
+                <SuperButton className={setClass("middle")} onClick={()=>setBtn("middle")}>middle</SuperButton>
+                <SuperButton className={setClass("low")} onClick={()=>setBtn("low")}>low</SuperButton>
             </div>
-                {/*<button className={ setClass('all') || classes.btn}
-                        onClick={() => setBtn('all')}>All
-                </button>
-                <button className={setClass('high') || classes.btn}
-                        onClick={() => setBtn('high')}>High
-                </button>
-                <button className={setClass('middle') || classes.btn}
-                        onClick={() => setBtn('middle')}>Middle
-                </button>
-                <button className={setClass('low') || classes.btn}
-                        onClick={() => setBtn('low')}>Low
-                </button>*/}
-
+            <div className={s.table}>
+            {mappedAffairs}
+            </div>
         </div>
     )
 }

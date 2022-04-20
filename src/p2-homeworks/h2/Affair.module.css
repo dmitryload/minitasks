@@ -1,17 +1,13 @@
 .table {
-    background-color: #99a6d2;
+    background-color: rgba(125, 171, 241, 0.2);
 }
 
-th:first-child {
-    border-left: 1px solid #314e6b;;
-}
 
 th {
     min-width: 100px;
     padding: 20px;
-    border-right: 1px solid #314e6b;
-    color: white;
-    text-shadow: 2px 2px #000;
+    color: #525151;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
 }
 .btn {
     width: 80px;
@@ -30,11 +26,11 @@ th {
     color: #ff5f5f;
 }
 .high {
-    color: #ff5f5f;
+    color: #ce5a5a;
 }
 .low {
-    color: #a6d3a3;
+    color: #6f8f6c;
 }
 .middle {
-    color: #fff856;
+    color: #c0be6e;
 }

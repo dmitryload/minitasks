@@ -1,5 +1,6 @@
 .alternativeMessage {
-    --background-color: #99a6d2;
+    --background-color: rgba(89, 132, 182, 0.6);
+    background-color: var(--background-color);
     flex-direction: row-reverse;
     background-color: var(--background-color);
     display: flex;
@@ -10,6 +11,7 @@
     width: 300px;
     border-radius: 15px;
     transition: .4s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.22);
 }
 .alternativeMessage:hover {
     transform: translateX(50px);
