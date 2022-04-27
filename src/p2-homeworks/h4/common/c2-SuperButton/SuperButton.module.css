@@ -9,9 +9,13 @@
     padding: 5px 20px;
     box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.22);
 }
+
 .default:hover, .red:hover {
-    opacity: .9;
     scale: 1.1;
+}
+.default:disabled {
+    background-color: rgba(171, 188, 204, 0.53);
+    scale: 1;
 }
 .red {
     background: rgba(255, 0, 0, 0.15);

@@ -50,7 +50,7 @@ function HW4() {
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
-                <SuperButton className={s.disabledBtn} disabled>
+                <SuperButton  disabled>
                     disabled
                 </SuperButton>
 
