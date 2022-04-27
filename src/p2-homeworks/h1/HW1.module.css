@@ -1,8 +1,10 @@
-.homework1 {
+.homework {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0;
 }
+
 .title {
     font-weight: 700;
     font-size: 24px;

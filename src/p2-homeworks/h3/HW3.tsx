@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import {v1} from "uuid";
-import s from "../../p1-main/m1-ui/u1-app/App.module.css";
+import s from "./HW3.module.css"
 
 export type UserType = {
     _id: string

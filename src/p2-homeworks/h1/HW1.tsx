@@ -1,7 +1,7 @@
 import React from 'react'
 import AlternativeMessage from "./AlternativeMessage/AlternativeMessage";
 import Message from "./Message/Message";
-import classes from "./hw1.module.css";
+import s from "./HW1.module.css";
 
 
 const messageData = {
@@ -25,10 +25,8 @@ const nf2 = (str: string): string => {
 
 function HW1() {
     return (
-        <div className={classes.homework1}>
-            <div className={classes.title}>Homework 1:</div>
-            {/*should work (должно работать)*/}
-
+        <div className={s.homework}>
+            <div className={s.title}>Homework 1:</div>
             <Message
                 avatar={messageData.avatar}
                 name={messageData.name}

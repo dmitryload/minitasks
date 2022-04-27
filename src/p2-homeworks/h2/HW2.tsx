@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
-import s from "../../p1-main/m1-ui/u1-app/App.module.css"
+import s from"./HW2.module.css"
 import {v1} from "uuid";
 
 export type AffairPriorityType = 'high' | 'low' | 'middle'
@@ -36,7 +36,7 @@ function HW2() {
 
     return (
         <div className={s.homework}>
-            <div className={s.title2}>Homework 2:</div>
+            <div className={s.title}>Homework 2:</div>
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}

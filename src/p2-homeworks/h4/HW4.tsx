@@ -32,37 +32,18 @@ function HW4() {
                     spanClassName={s.testSpanError}
                 />
 
-                <SuperInputText
-                    className={s.blue}
-                    // проверьте, рабоет ли смешивание классов
-                />
+                <SuperInputText className={s.blue}/>
 
-                {/*----------------------------------------------------*/}
+                <SuperButton>default</SuperButton>
 
-                <SuperButton>
-                    default
-                </SuperButton>
+                <SuperButton red onClick={showAlert}>delete</SuperButton>
 
-                <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
-                    onClick={showAlert}
-                >
-                    delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
-
-                <SuperButton  disabled>
-                    disabled
-                </SuperButton>
-
-                {/*----------------------------------------------------*/}
+                <SuperButton  disabled>disabled</SuperButton>
 
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
-                >
-                    I did it {/*// этот текст попадёт в children*/}
-                </SuperCheckbox>
-
+                >I did it</SuperCheckbox>
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
