@@ -14,7 +14,7 @@ function Header() {
                         <NavLink className={s.link} to={"/middle"}>Middle</NavLink>
                         <NavLink className={s.link} to={"/senior"}>Senior</NavLink>
                     </nav>
-                    <span className={s.box}>M</span>
+                    <span className={s.box}>Menu</span>
                 </div>
             </div>
         </div>
