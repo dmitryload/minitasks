@@ -1,0 +1,13 @@
+.editableSpan {
+    padding: 5px 20px;
+    display: flex;
+    min-width: 200px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(95, 170, 255, 0.42);
+    margin-bottom: 20px;
+    color: #314e6b;
+}
