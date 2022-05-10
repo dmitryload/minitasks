@@ -1,0 +1,27 @@
+.homework {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #314e6b;
+    margin-bottom: 30px;
+}
+.btns {
+    display: flex;
+    margin: 10px 0;
+}
+.user {
+    margin: 5px 0;
+    padding: 5px;
+    display: flex;
+    min-width: 200px;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(75, 31, 208, 0.25);
+}
+

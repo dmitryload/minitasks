@@ -1,0 +1,22 @@
+
+.select {
+    font-family: "Permanent Marker";
+    padding:0 10px;
+    border: 0;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.67);
+    box-shadow: 2px 2px 10px rgba(37, 37, 37, 0.22);
+    width: 100px;
+    height: 30px;
+    outline: none;
+    appearance: none;
+    margin-bottom: 10px;
+}
+.option {
+    appearance: none;
+    outline: none;
+    border: 0;
+}
+.option:checked {
+    background-color: rgba(185, 185, 255, 0.35);
+}
