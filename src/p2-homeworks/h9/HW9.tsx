@@ -6,7 +6,7 @@ import s from "../h8/HW8.module.css";
 function HW9() {
     return (
         <div className={s.homework}>
-            <div className={s.title}>Homework 8:</div>
+            <div className={s.title}>Homework 9:</div>
             <Clock/>
         </div>
     )
