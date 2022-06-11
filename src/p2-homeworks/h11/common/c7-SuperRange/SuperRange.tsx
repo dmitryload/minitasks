@@ -12,31 +12,29 @@ type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы
 
 const SuperRange: React.FC<SuperRangePropsType> = (
     {
-        type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
+        type,
         onChange, onChangeRange,
         className,
 
-        ...restProps// все остальные пропсы попадут в объект restProps
+        ...restProps
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(e) // сохраняем старую функциональность
+        onChange && onChange(e)
 
         onChangeRange && onChangeRange(+e.currentTarget.value)
     }
 
-    const finalRangeClassName = `${s.range} ${className ? className : ''}`
-
     return (
-        <>
+        <div className={s.body}>
             <input
                 type={'range'}
                 onChange={onChangeCallback}
-                className={finalRangeClassName}
-
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+                className={s.slider}
+                value={restProps.value}
+                {...restProps}
             />
-        </>
+        </div>
     )
 }
 
