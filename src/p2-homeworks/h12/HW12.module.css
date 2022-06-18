@@ -1,0 +1,45 @@
+.homework {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.dark, .red, .green, .grey {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.text {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.grey {
+    background: rgba(100, 100, 100, 0.13);
+}
+.dark {
+    background: dimgrey;
+}
+
+.dark-text {
+    color: aliceblue;
+}
+
+.red {
+    background: rgba(255, 206, 206, 0.35);
+}
+
+.red-text {
+    color: #462c2c;
+}
+
+.green {
+    background: rgba(231, 255, 231, 0.47);
+}
+
+.green-text {
+    color: #22421d;
+}
