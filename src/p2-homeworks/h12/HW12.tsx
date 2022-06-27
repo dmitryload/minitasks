@@ -20,7 +20,7 @@ function HW12() {
             </div>
             <div className={s.homework}>
             <div className={`${s[theme + '-text']} ${s.text}`}>
-                homeworks 12
+                homework 12
             </div>
             <SuperSelect value={theme} options={themes} onChangeOption={onChangeCallback}/>
             </div>

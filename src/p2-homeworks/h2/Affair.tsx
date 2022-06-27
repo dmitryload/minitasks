@@ -13,13 +13,13 @@ const Affair:React.FC<AffairPropsType> = ({affair, deleteAffairCallback}) => {
         deleteAffairCallback(newId)
     }
     return (
-        <tr className={s.table}>
-            <th>{affair.name}</th>
-            <th className={s[affair.priority]}>{affair.priority}</th>
-            <th>
+        <div className={s.table}>
+            <span>{affair.name}</span>
+            <span className={s[affair.priority]}>{affair.priority}</span>
+            <span>
                 <SuperButton onClick={()=>deleteCallback(affair._id)}>X</SuperButton>
-            </th>
-        </tr>
+            </span>
+        </div>
     )
 }
 
